@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: validations-example
+
+server:
+  port: 6004
