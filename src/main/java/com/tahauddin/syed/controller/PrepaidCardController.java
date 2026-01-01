@@ -22,7 +22,18 @@ public class PrepaidCardController {
         try {
             log.info("Prepaid Card Request is :: {}", objectMapper.writeValueAsString(prepaidCardRequest));
         } catch (Exception e) {
+            log.info("Exception while processing Create Card :: {}",e.getMessage());
 
+        }
+        return ResponseEntity.ok(prepaidCardRequest);
+    }
+
+    @PostMapping("/createCardTest2")
+    public ResponseEntity<PrepaidCardRequest> createCardTest2(@RequestBody @Valid PrepaidCardRequest prepaidCardRequest) {
+        try {
+            log.info("Prepaid Card Request is :: {}", objectMapper.writeValueAsString(prepaidCardRequest));
+        } catch (Exception e) {
+            log.info("Exception while processing Create Card :: {}",e.getMessage());
         }
         return ResponseEntity.ok(prepaidCardRequest);
     }
