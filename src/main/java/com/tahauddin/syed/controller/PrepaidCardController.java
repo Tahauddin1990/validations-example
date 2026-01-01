@@ -23,7 +23,6 @@ public class PrepaidCardController {
             log.info("Prepaid Card Request is :: {}", objectMapper.writeValueAsString(prepaidCardRequest));
         } catch (Exception e) {
             log.info("Exception while processing Create Card :: {}",e.getMessage());
-
         }
         return ResponseEntity.ok(prepaidCardRequest);
     }
